@@ -5,6 +5,11 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
+        tools {
+          maven 'MAVEN_HOME'
+          jdk 'JAVA_HOME'
+        }
+
     stages {
         stage('Build') {
             steps {
